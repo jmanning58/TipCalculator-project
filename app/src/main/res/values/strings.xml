@@ -5,7 +5,7 @@
     <string name="regTip">18% Tip</string>
     <string name="customTip">Custom Tip</string>
     <string name="tipTitle">Tip Amounts</string>
-    <string name="startButton">Calculate</string>
+    <string name="calcButton">Calculate</string>
     <string name="resetButton">Reset</string>
     <string name="numPeople">More than one person?</string>
     <string name="total">Bill: </string>
