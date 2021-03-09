@@ -10,4 +10,5 @@
     <string name="numPeople">More than one person?</string>
     <string name="total">Bill: </string>
     <string name="amount">Please enter your amount</string>
+    <string name="exitB"> X </string>
 </resources>

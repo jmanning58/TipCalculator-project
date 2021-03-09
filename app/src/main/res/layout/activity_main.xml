@@ -8,40 +8,41 @@
 
     <TextView
         android:id="@+id/tipTitle"
-        android:layout_width="0dp"
-        android:layout_height="46dp"
-        android:layout_marginEnd="45dp"
+        android:layout_width="142dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="28dp"
         android:text="@string/tipTitle"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.844"
-        app:layout_constraintStart_toEndOf="@+id/people"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.303" />
+        app:layout_constraintVertical_bias="0.203" />
 
     <TextView
         android:id="@+id/totalAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="36dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="191dp"
+        android:layout_marginBottom="4dp"
         android:text="@string/total"
         android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/amount_line"
-        app:layout_constraintEnd_toStartOf="@+id/radioGroup"
         app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="0dp"
-        android:layout_height="190dp"
+        android:layout_width="128dp"
+        android:layout_height="229dp"
         android:layout_marginEnd="38dp"
+        android:layout_marginBottom="287dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/totalAmount"
-        app:layout_constraintTop_toBottomOf="@+id/tipTitle">
+        app:layout_constraintTop_toBottomOf="@+id/exitButton"
+        app:layout_constraintVertical_bias="1.0">
 
         <RadioButton
             android:id="@+id/lowTip"
@@ -73,11 +74,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="39dp"
         android:text="@string/numPeople"
         app:layout_constraintBaseline_toBaselineOf="@+id/tipTitle"
-        app:layout_constraintEnd_toStartOf="@+id/tipTitle"
+
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="42dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="28dp"
+        android:backgroundTint="@color/red_200"
+        android:text="@string/exitB"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/calculateButton"
@@ -85,22 +97,23 @@
         android:layout_height="wrap_content"
         android:text="@string/calcButton"
         app:layout_constraintBottom_toTopOf="@+id/resetButton"
-        app:layout_constraintEnd_toStartOf="@+id/radioGroup" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/resetButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="114dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="104dp"
         android:text="@string/resetButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/calculateButton" />
 
     <EditText
         android:id="@+id/amount_line"
-        android:layout_width="223dp"
-        android:layout_height="38dp"
+        android:layout_width="222dp"
+        android:layout_height="44dp"
         android:layout_marginTop="344dp"
         android:inputType="text"
         android:text="@string/amount"
@@ -109,6 +122,5 @@
         app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

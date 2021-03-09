@@ -3,6 +3,7 @@ package com.example.tipcalculator_manning;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private String TAG="MainActivity";
     private Button calculateB;
     private Button resetB;
+    private Button quitB;
     private Intent i;
     private EditText editText;
 
@@ -31,12 +33,18 @@ public class MainActivity extends AppCompatActivity {
         i = new Intent(this, Calculate.class);
 
         calculateB.setOnClickListener(v -> {
-            startActivity(i, REQUEST_CODE);
+            startActivity(i);
+            startActivityForResult(i, REQUEST_CODE);
         });
 
-        resetB.setOnClickListener(v -> {
-            
-        });
+//        resetB.setOnClickListener(v -> {
+//
+//        });
+
+//        quitB.setOnClickListener(v -> {
+//            finish();
+//            System.exit(0);
+//        });
     }
 
     public void displayToast(String message) {
@@ -52,6 +60,27 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestoreInstanceState(@NonNull Bundle saveInstanceState) {
         super.onRestoreInstanceState(saveInstanceState);
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        Log.i("MainActivity", "Result Code: " + resultCode);
+
+        if (requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+            Bundle extras = data.getExtras();
+
+            if(extras != null) {
+
+            }
+        }
+    }
+
+
+
+
+
+
 
     @Override
     protected void onStart() {
